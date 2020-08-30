@@ -1,0 +1,22 @@
+<br>
+<form style = "margin: 1em"
+    [formGroup]="form"
+    (ngSubmit)="onSubmit(form.value)">
+
+    <label for="name">Name:</label>
+    <input type="text" name="name" id="name" formControlName="name">
+
+    <br>
+    <label for="email">Email:</label>
+    <input type="text" name="email" id="email" formControlName="email">
+    <div *ngIf="form.get('email').hasError('pattern')" class="error" style="color: red">Please enter a valid email address.</div>
+
+    <br>
+    <label for="message">Message:</label>
+    <input type="text" name="message" id="message" formControlName="message">
+
+    <div *ngIf="checkBlankFields()" class="error" style="color: red">Please fill out all fields.</div>
+
+    <br>
+    <button type="submit" [disabled]="!form.valid">Send!</button>
+</form>

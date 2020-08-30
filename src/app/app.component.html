@@ -1,0 +1,15 @@
+<header>
+    <div class="btn-group btn-group-toggle" ngbRadioGroup name="radioBasic" style = "margin: .5em">
+        <label ngbButtonLabel class="btn-primary">
+          <a ngbButton type="radio" routerLink='/' style="color: white">{{ 'Home' }}</a>
+        </label>
+        <label ngbButtonLabel class="btn-primary" routerLink='/contact'>
+          <a ngbButton type="radio" >{{ contactButtonText() }}</a>
+        </label>
+        <label ngbButtonLabel class="btn-primary" routerLink='/shiritori'>
+          <a ngbButton type="radio">{{ shiritoriButtonText() }}</a>
+        </label>
+      </div>
+</header>
+
+<router-outlet></router-outlet>
