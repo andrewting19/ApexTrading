@@ -18,7 +18,7 @@ export class ContactUsComponent implements OnInit {
       email: new FormControl('', Validators.compose([
         Validators.required,
         Validators.pattern("^[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$")
-      ])), 
+      ])),
       message: new FormControl('', Validators.required)
     });
   }
@@ -29,12 +29,18 @@ export class ContactUsComponent implements OnInit {
     for (const content of contents) {
       console.log(content[0] + ": " + content[1]);
     }
-    return this.http.post(`https://form.diem.life/contact?name=${contactForm.name}&email=${contactForm.email}&message=${contactForm.message}`, contactForm);
+    const link = `https://api.diem.life/contact?name=${contactForm.name}&email=${contactForm.email}&desc=${contactForm.message}`;
+    console.log(link);
+    return this.http.post(`https://api.diem.life/contact?name=${contactForm.name}&email=${contactForm.email}&desc=${contactForm.message}`, null)
+      .subscribe((result) => {
+        console.log("Subscribed to observable");
+        console.log(result);
+      });
   }
 
   checkBlankFields() {
-    return this.form.get('name').hasError('required') || 
-      this.form.get('email').hasError('required') || 
+    return this.form.get('name').hasError('required') ||
+      this.form.get('email').hasError('required') ||
       this.form.get('message').hasError('required');
   }
 
