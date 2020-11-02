@@ -1,5 +1,6 @@
 .home-img {
-  width: 500px;
+  max-width: 500px;
+  margin: 0 auto;
 }
 
 .object-fit {
@@ -37,7 +38,21 @@
   width: 500px;
   margin-bottom: 20px;
 }
+.img-group-div {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  max-width: 100vw;
+  flex-wrap: wrap;
+}
+.img-grp {
+  width: 16vw;
+}
 
 p {
-  margin: 10px 0;
+  margin: 10px auto;
+}
+
+.wrap {
+  max-width: 550px;
 }
