@@ -1,4 +1,5 @@
 import { Component, ElementRef, OnInit, ViewChild } from '@angular/core';
+import {environment} from '../../environments/environment';
 
 @Component({
   selector: 'app-home',
@@ -28,6 +29,10 @@ export class HomeComponent implements OnInit {
       }
     }
     console.log(this.images);
+  }
+
+  imgUrl(img) {
+    return environment.assetPath + img;
   }
 
 }
