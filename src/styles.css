@@ -1,1 +1,17 @@
 /* You can add global styles to this file, and also import other style files */
+body {
+  font-size: 19px;
+  line-height: 1.4211;
+  font-weight: 400;
+  letter-spacing: .012em;
+  font-family: "SF Pro Display","SF Pro Icons","Helvetica Neue","Helvetica","Arial",sans-serif;
+  color: #1d1d1f;
+}
+
+.title {
+  font-size: 48px;
+  line-height: 1.08349;
+  font-weight: 500;
+  letter-spacing: -.002em;
+  font-family: "SF Pro Display","SF Pro Icons","Helvetica Neue","Helvetica","Arial",sans-serif;
+}

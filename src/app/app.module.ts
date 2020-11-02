@@ -9,13 +9,17 @@ import { AppComponent } from './app.component';
 import { ContactUsComponent } from './contact-us/contact-us.component';
 import { ShiritoriComponent } from './shiritori/shiritori.component';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
+import { GalleryComponent } from './gallery/gallery.component';
+import { HomeComponent } from './home/home.component';
 
 
 @NgModule({
   declarations: [
     AppComponent,
     ContactUsComponent,
-    ShiritoriComponent
+    ShiritoriComponent,
+    GalleryComponent,
+    HomeComponent
   ],
   imports: [
     BrowserModule,

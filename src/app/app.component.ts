@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-root',
@@ -9,28 +10,20 @@ export class AppComponent {
   title = 'practice';
   displayContactForm = false;
   displayShiritori = false;
+  displayHome = true;
 
-  handleClick() {
-    this.displayContactForm = !this.displayContactForm;
+  constructor(private router: Router) {
   }
 
-  contactButtonText() {
-    return this.displayContactForm === true ? "Close" : "Contact Us";
+  ngOnInit() {
+    console.log(this.router.url)
   }
 
-  contactButtonLink() {
-    return this.displayContactForm === true ? "" : "contact";
+  tabChanged() {
+    console.log(this.router.url)
   }
 
-  handleShiritoriClick() {
-    this.displayShiritori = !this.displayShiritori;
-  }
-
-  shiritoriButtonText() {
-    return this.displayShiritori === true ? "Close" : "Play a game of shiritori";
-  }
-
-  shiritoriButtonLink() {
-    return this.displayContactForm === true ? "" : "shiritori";
+  checkRoute(url) {
+    return this.router.url == url;
   }
 }
