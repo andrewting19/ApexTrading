@@ -56,3 +56,45 @@ p {
 .wrap {
   max-width: 550px;
 }
+
+.invisible {
+  display: none;
+}
+.btn-div {
+  width: fit-content;
+  margin: 0 auto;
+}
+
+.home-btn {
+  cursor: pointer;
+  font-size: 15px;
+  line-height: 3.14286;
+  font-weight: 400;
+  letter-spacing: .02em;
+  font-family: "SF Pro Text","Myriad Set Pro","SF Pro Icons","Helvetica Neue","Helvetica","Arial",sans-serif;
+  color: #1d1d1f;
+  position: relative;
+  z-index: 1;
+  display: inline-block;
+  padding: 0 20px;
+  opacity: .8;
+  background: no-repeat;
+  text-decoration: none;
+  white-space: nowrap;
+  -webkit-transition: opacity 0.3s cubic-bezier(0.25, 0.1, 0.25, 1);
+  transition: opacity 0.3s cubic-bezier(0.25, 0.1, 0.25, 1);
+  -webkit-tap-highlight-color: transparent;
+  outline-offset: -7px;
+  -webkit-font-smoothing: antialiased;
+  border: none;
+  outline: 0;
+  -moz-outline-style: none;
+}
+
+.home-btn:hover {
+  opacity: 1;
+}
+
+.icon {
+  margin-bottom: 2px;
+}
