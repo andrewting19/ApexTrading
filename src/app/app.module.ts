@@ -12,6 +12,8 @@ import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { GalleryComponent } from './gallery/gallery.component';
 import { HomeComponent } from './home/home.component';
 import { Home2Component } from './home/home2/home2.component';
+import { ResumeComponent } from './resume/resume.component';
+import { SafePipe } from './safe.pipe';
 
 
 @NgModule({
@@ -21,7 +23,9 @@ import { Home2Component } from './home/home2/home2.component';
     ShiritoriComponent,
     GalleryComponent,
     HomeComponent,
-    Home2Component
+    Home2Component,
+    ResumeComponent,
+    SafePipe
   ],
   imports: [
     BrowserModule,

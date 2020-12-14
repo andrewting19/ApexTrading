@@ -25,17 +25,17 @@ export class GalleryComponent implements OnInit {
   constructor() { }
 
   ngOnInit(): void {
-    let images = [this.img6, this.img7, this.img8, this.img9, this.img10, this.img11, this.img12, this.img13, this.img14, this.img15, this.img16, this.img17];
-    console.log(images);
-    for (let i = 0; i < images.length; i ++) {
-      console.log(images[i].nativeElement);
-      this.images[i] = {
-        'width' : images[i].nativeElement.naturalWidth,
-        'height' : images[i].nativeElement.naturalHeight
-      }
-    }
-    this.images = [0,0,0,0,0, ...this.images];
-    console.log(this.images);
+    // let images = [this.img6, this.img7, this.img8, this.img9, this.img10, this.img11, this.img12, this.img13, this.img14, this.img15, this.img16, this.img17];
+    // console.log(images);
+    // for (let i = 0; i < images.length; i ++) {
+    //   console.log(images[i].nativeElement);
+    //   this.images[i] = {
+    //     'width' : images[i].nativeElement.naturalWidth,
+    //     'height' : images[i].nativeElement.naturalHeight
+    //   }
+    // }
+    // this.images = [0,0,0,0,0, ...this.images];
+    // console.log(this.images);
   }
 
   imgUrl(img) {
