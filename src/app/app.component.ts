@@ -1,5 +1,7 @@
 import { Component } from '@angular/core';
 import { Router } from '@angular/router';
+import {environment} from '../environments/environment';
+
 
 @Component({
   selector: 'app-root',
@@ -7,20 +9,11 @@ import { Router } from '@angular/router';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'practice';
-  displayContactForm = false;
-  displayShiritori = false;
-  displayHome = true;
 
   constructor(private router: Router) {
   }
 
   ngOnInit() {
-    console.log(this.router.url)
-  }
-
-  tabChanged() {
-    console.log(this.router.url)
   }
 
   checkRoute(url) {
@@ -30,5 +23,9 @@ export class AppComponent {
   getRoute() {
     console.log(this.router.url)
     return this.router.url
+  }
+
+  imgUrl(img) {
+    return environment.assetPath + img;
   }
 }
