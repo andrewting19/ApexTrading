@@ -4,6 +4,11 @@
     justify-content: center;
 }
 
+.testimonial-img {
+    max-width: 40%;
+    margin: 10px auto;
+}
+
 .title {
     padding: 20px 0 10px 0;
     font-size: 32px;
