@@ -60,6 +60,10 @@
   opacity: 1;
 }
 
+.discord-icon {
+  height: 25px;
+}
+
 .object-fit {
   background-position: center center;
   background-repeat: no-repeat;

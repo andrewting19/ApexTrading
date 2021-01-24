@@ -2,6 +2,14 @@ p {
     margin: 10px auto;
 }
 
+ul {
+    /* margin: 0; */
+    padding: 0;
+    padding-left: 1em;
+    /* padding-inline-start: 0;
+    margin-block-start: 0; */
+}
+
 a {
     color: inherit;
     font-family: inherit;
@@ -9,9 +17,48 @@ a {
 }
 
 a:hover {
-    border: none;
-    border-bottom: 2px solid #fde1a4;
     text-decoration: none;
+}
+
+.membership {
+    border-bottom: 1px solid #fde1a4;
+}
+
+.membership:hover {
+    background-image: linear-gradient(45deg, #e57d56, #fce0ac);
+    background-size: 100%;
+    background-repeat: repeat;
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent; 
+    -moz-background-clip: text;
+    -moz-text-fill-color: transparent;
+    border-bottom: 2px solid #e57d56;
+}
+
+.buy-btn {
+    background-image: linear-gradient(-45deg,  #ee7752, #e73c7e,  #fce0ac,#e73c7e);
+    background-size: 100%;
+    background-repeat: repeat;
+    border-radius: 5px;
+    color: black;
+    margin: 0 0 0 25px;
+    padding: 6px 10px;
+    font-weight: 400;
+    background-size: 400% 400%;
+    animation: gradient 5s ease infinite;
+}
+
+@keyframes gradient {
+	0% {
+		background-position: 0% 50%;
+	}
+	50% {
+		background-position: 100% 50%;
+	}
+	100% {
+		background-position: 0% 50%;
+	}
 }
 
 .text {
@@ -33,4 +80,11 @@ a:hover {
 .membership-tiers {
     width: fit-content;
     margin: 0 auto;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+.tier-div {
+    margin: 0 50px 0 0;
 }
