@@ -26,4 +26,9 @@ export class AppComponent {
   checkRoute(url) {
     return this.router.url == url;
   }
+
+  getRoute() {
+    console.log(this.router.url)
+    return this.router.url
+  }
 }

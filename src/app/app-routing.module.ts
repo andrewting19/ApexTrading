@@ -1,17 +1,15 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
-import { ContactUsComponent } from './contact-us/contact-us.component';
-import { GalleryComponent } from './gallery/gallery.component';
 import { HomeComponent } from './home/home.component';
-import { ShiritoriComponent } from './shiritori/shiritori.component';
-import { ResumeComponent } from './resume/resume.component';
+import { MembershipComponent } from './membership/membership.component';
+import { PerformanceComponent } from './performance/performance.component';
+import { TestimonialsComponent } from './testimonials/testimonials.component';
 
 const routes: Routes = [
   { path: '', component: HomeComponent },
-  { path: 'contact', component: ContactUsComponent},
-  { path: 'shiritori', component: ShiritoriComponent},
-  { path: 'gallery', component: GalleryComponent },
-  { path: 'resume', component: ResumeComponent },
+  { path: 'performance', component: PerformanceComponent },
+  { path: 'testimonials', component: TestimonialsComponent },
+  { path: 'membership', component: MembershipComponent },
   { path: '**', redirectTo: '' }
 ];
 

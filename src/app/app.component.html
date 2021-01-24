@@ -1,9 +1,9 @@
 <header class="header">
     <div class="header-items">
-      <div class="header-item" routerLink="/">Home</div>
-      <div class="header-item" routerLink='/gallery'>Gallery</div>
-      <div class="header-item" routerLink='/resume'>Resume</div>
-      <div class="header-item" routerLink='/shiritori'>Shiritori</div>
+      <div class="header-item" routerLink="/"><span class="header-text" [ngClass]="{ 'header-selected' : getRoute() == '/' }">Home</span></div>
+      <div class="header-item" routerLink='/performance'><span class="header-text" [ngClass]="{ 'header-selected' : getRoute() == '/performance' }">Performance</span></div>
+      <div class="header-item" routerLink='/testimonials'><span class="header-text" [ngClass]="{ 'header-selected' : getRoute() == '/testimonials' }">Testimonials</span></div>
+      <div class="header-item" routerLink='/membership'><span class="header-text" [ngClass]="{ 'header-selected' : getRoute() == '/membership' }">Membership</span></div>
     </div>
 </header>
 

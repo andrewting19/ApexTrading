@@ -1,0 +1,36 @@
+p {
+    margin: 10px auto;
+}
+
+a {
+    color: inherit;
+    font-family: inherit;
+    font-weight: 300;
+}
+
+a:hover {
+    border: none;
+    border-bottom: 2px solid #fde1a4;
+    text-decoration: none;
+}
+
+.text {
+    font-size: 14px;
+}
+
+.title {
+    padding: 20px 0 10px 0;
+    font-size: 32px;
+}
+
+.membership-body {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    background-color: rgba(0,0,0,.75);
+}
+
+.membership-tiers {
+    width: fit-content;
+    margin: 0 auto;
+}

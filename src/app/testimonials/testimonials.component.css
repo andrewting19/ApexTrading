@@ -1,0 +1,10 @@
+.testimonials-body {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.title {
+    padding: 20px 0 10px 0;
+    font-size: 32px;
+}

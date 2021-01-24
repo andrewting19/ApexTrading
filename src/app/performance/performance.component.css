@@ -1,0 +1,15 @@
+.performance-body {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.title {
+    padding: 20px 0 10px 0;
+    font-size: 32px;
+}
+
+.performance-img {
+    max-width: 60%;
+    margin: 10px auto;
+}
