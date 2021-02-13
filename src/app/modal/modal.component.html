@@ -1,0 +1,31 @@
+<ng-template #content><ng-content></ng-content></ng-template>
+
+<div class="c-n-modal" role="dialog">
+
+  <!-- * This layout useful for default structure and styles -->
+  <div *ngIf="!customMode" class="c-n-modal__content" role="document">
+    <div class="c-n-modal__layout">
+      <div class="c-n-modal__header" *ngIf="!removeCloseLogic">
+        <button
+          class="c-n-modal__close h-btn-reset"
+          title="Close modal"
+          aria-label="Close modal"  
+          value="Close modal"
+          (click)="close()"
+          type="button"
+          style="border: 1px black solid">
+          <span style="font-size: 20px">✖️</span>
+          <!-- <svg class="icon icon-cancel" aria-hidden="true"><use xlink:href="#icon-cancel"></use></svg> -->
+        </button>
+      </div>
+      <ng-container *ngTemplateOutlet="content"></ng-container>
+    </div>
+  </div>
+
+  <!-- * This layout useful for custom structure and styles -->
+  <ng-container *ngIf="customMode">
+    <ng-container *ngTemplateOutlet="content"></ng-container>
+  </ng-container>
+
+</div>
+<div class="modal-overlay" (click)="!removeCloseLogic && !disableBgClose ? close() : false" aria-hidden="true"></div>

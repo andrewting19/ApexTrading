@@ -3,6 +3,8 @@ import { NgModule } from '@angular/core';
 import { ReactiveFormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
 import { CountdownModule } from 'ngx-countdown';
+import { LayoutModule } from '@angular/cdk/layout';
+import { ModalService } from './modal/modal.service';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -12,6 +14,7 @@ import { SafePipe } from './safe.pipe';
 import { PerformanceComponent } from './performance/performance.component';
 import { TestimonialsComponent } from './testimonials/testimonials.component';
 import { MembershipComponent } from './membership/membership.component';
+import { ModalComponent } from './modal/modal.component';
 
 
 @NgModule({
@@ -21,7 +24,8 @@ import { MembershipComponent } from './membership/membership.component';
     SafePipe,
     PerformanceComponent,
     TestimonialsComponent,
-    MembershipComponent
+    MembershipComponent,
+    ModalComponent
   ],
   imports: [
     BrowserModule,
@@ -29,9 +33,12 @@ import { MembershipComponent } from './membership/membership.component';
     ReactiveFormsModule,
     HttpClientModule,
     CountdownModule,
-    NgbModule
+    NgbModule,
+    LayoutModule
   ],
-  providers: [],
+  providers: [
+    ModalService
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

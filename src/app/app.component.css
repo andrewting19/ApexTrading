@@ -64,6 +64,10 @@
   height: 25px;
 }
 
+.apex-icon {
+  height: 27px;
+}
+
 .object-fit {
   background-position: center center;
   background-repeat: no-repeat;

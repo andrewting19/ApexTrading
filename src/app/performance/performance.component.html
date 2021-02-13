@@ -1,6 +1,8 @@
 <div class="performance-body">
     <p class="title">💰 <span class="gradient-text">Alert Results</span></p>
-    <img class="performance-img" [src]="imgUrl('alert_result1.png')">
-    <img class="performance-img" [src]="imgUrl('alert_result2.png')">
-    <img class="performance-img" [src]="imgUrl('alert_result3.png')">
+    <img *ngFor="let image of images" (click)="openModal('performance-modal', image)" class="performance-img" [src]="imgUrl(image)">
 </div>
+
+<app-modal id="performance-modal">
+    <img class="modal-img" [src]="imgUrl(openedImg)">
+</app-modal>

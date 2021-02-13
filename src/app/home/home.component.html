@@ -1,18 +1,18 @@
 <div class="home-body">
   <p class="title gradient-text">Welcome to Apex Trading Utopia</p>
-  <p>We are a Discord community of likeminded traders and investors. </p>
+  <p class="title-desc">We are a Discord community of likeminded traders and investors. </p>
   <div class="home-desc">
     <p class="gradient-text center subtitle">Our Promise</p>
-    <p>At our server, we strive to promote a level of education, self-improvement, transparency, and community higher than any other stock trading Discord server.</p>
+    <p class="desc">At our server, we strive to promote a level of education, self-improvement, transparency, and community higher than any other stock trading Discord server.</p>
     <p class="gradient-text center subtitle">Our Mission</p>
-    <p>
+    <p class="desc">
       Little known is that the building blocks of consistent profitability are good habits, hard work, and strict rules. 
       We hope to instill these qualities, and the self-discipline to build them, into our members and help them achieve financial freedom.
     </p>
     <p class="gradient-text center subtitle">Our Service</p>
     <div class="home-row">
       <div class="row-desc">
-        <p class="row-text">
+        <p class="row-text first-row">
           We offer a variety of services including options alerts (see <a routerLink="/performance">Performance</a>) but again we want this server to be dedicated to self-improvement,
           where members can thrive after learning how to trade like veterans.
         </p>
@@ -25,7 +25,7 @@
           Study, question, learn and be rewarded.
         </p>
       </div>
-      <div>
+      <div *ngIf="!mobileView">
         <img class="home-img" [src]="imgUrl('clickbait4.png')">
       </div>
     </div>

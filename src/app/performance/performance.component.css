@@ -1,3 +1,8 @@
+button {
+    border-radius: revert;
+    border: none;
+}
+
 .performance-body {
     display: flex;
     flex-direction: column;
@@ -10,6 +15,19 @@
 }
 
 .performance-img {
-    max-width: 60%;
+    max-width: 50%;
+    min-width: 750px;
     margin: 10px auto;
 }
+
+.modal-img {
+    max-width: 100%;
+}
+
+@media (max-width: 768px) {
+    .performance-img {
+        max-width: 92%;
+        margin: 5px auto;
+        min-width: unset;
+    }
+  }

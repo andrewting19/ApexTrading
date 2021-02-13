@@ -18,6 +18,7 @@
   max-width: 50%;
   margin: 0 auto;
   text-align: center;
+  min-width: 700px;
 }
 
 .home-row {
@@ -115,4 +116,34 @@ a:hover {
 
 .icon {
   margin-bottom: 2px;
+}
+
+@media (max-width: 768px) {
+  p {
+    text-align: left;
+  }
+  .title {
+    font-size: 35px;
+    text-align: center;
+  }
+  .title-desc {
+    text-align: center;
+    margin: 0 20px;
+  }
+  .home-desc {
+    max-width: 90%;
+    min-width: unset;
+  }
+  .row-desc {
+    max-width: none;
+  }
+  .desc {
+    margin: 0 20px;
+  }
+  .row-text {
+    margin: 15px 20px;
+  }
+  .first-row {
+    margin-top: 0;
+  }
 }

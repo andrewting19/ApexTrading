@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { Router } from '@angular/router';
 import {environment} from '../environments/environment';
+import { BreakpointObserver, BreakpointState } from '@angular/cdk/layout';
 
 
 @Component({
@@ -9,11 +10,21 @@ import {environment} from '../environments/environment';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
+  mobileView: boolean = false;
 
-  constructor(private router: Router) {
+  constructor(
+    public breakpointObserver: BreakpointObserver, 
+    private router: Router) {
   }
 
   ngOnInit() {
+    this.breakpointObserver.observe(['(max-width: 767px)']).subscribe((state: BreakpointState) => {
+      if (state.matches) {
+        this.mobileView = true;
+      } else {
+        this.mobileView = false;
+      }
+    })
   }
 
   checkRoute(url) {
@@ -21,7 +32,6 @@ export class AppComponent {
   }
 
   getRoute() {
-    console.log(this.router.url)
     return this.router.url
   }
 

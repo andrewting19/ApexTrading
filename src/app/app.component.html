@@ -1,10 +1,11 @@
 <header class="header">
     <div class="header-items">
-      <div class="header-item" routerLink="/"><span class="header-text" [ngClass]="{ 'header-selected' : getRoute() == '/' }">Home</span></div>
-      <div class="header-item" routerLink='/performance'><span class="header-text" [ngClass]="{ 'header-selected' : getRoute() == '/performance' }">Performance</span></div>
-      <div class="header-item" routerLink='/testimonials'><span class="header-text" [ngClass]="{ 'header-selected' : getRoute() == '/testimonials' }">Testimonials</span></div>
-      <div class="header-item" routerLink='/membership'><span class="header-text" [ngClass]="{ 'header-selected' : getRoute() == '/membership' }">Membership</span></div>
-      <a class="header-item" href="https://discord.gg/gdN3buBTAR" target="_blank" rel="noopener noreferrer"><img class="discord-icon" [src]="imgUrl('discord-icon.png')"> Discord</a>
+      <div *ngIf="!mobileView" class="header-item" routerLink="/"><span class="header-text" [ngClass]="{ 'header-selected' : getRoute() == '/' }">Home</span></div>
+      <div *ngIf="mobileView" class="header-item" routerLink="/"><span class="header-text" [ngClass]="{ 'header-selected' : getRoute() == '/' }"><img class="apex-icon" [src]="imgUrl('apex_lion_icon.png')"></span></div>
+      <div class="header-item" routerLink='/performance'><span class="header-text" [ngClass]="{ 'header-selected' : getRoute() == '/performance' }">{{ mobileView ? 'Perf...' : 'Performance'}}</span></div>
+      <div class="header-item" routerLink='/testimonials'><span class="header-text" [ngClass]="{ 'header-selected' : getRoute() == '/testimonials' }">{{ mobileView ? 'Test...' : 'Testimonials' }}</span></div>
+      <div class="header-item" routerLink='/membership'><span class="header-text" [ngClass]="{ 'header-selected' : getRoute() == '/membership' }">{{ mobileView ? 'Memb...' : 'Membership' }}</span></div>
+      <a class="header-item" href="https://discord.gg/JH7bPd84Gx" target="_blank" rel="noopener noreferrer"><img class="discord-icon" [src]="imgUrl('discord-icon.png')">{{mobileView ? '' : ' Discord'}}</a>
     </div>
 </header>
 

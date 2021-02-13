@@ -1,8 +1,21 @@
 <div class="testimonials-body">
     <p class="title gradient-text">Testimonials</p>
-    <img class="testimonial-img" [src]="imgUrl('clickbait4.png')">
-    <img class="testimonial-img" [src]="imgUrl('clickbait2.png')">
-    <img class="testimonial-img" [src]="imgUrl('clickbait5.png')">
-    <img class="testimonial-img" [src]="imgUrl('clickbait3.png')">
-    <img class="testimonial-img" [src]="imgUrl('clickbait1.png')">
+    <div class="testimonial-div">
+        <div class="testimonial-img-col">
+            <img class="testimonial-img" [src]="imgUrl('clickbait4.png')">
+            <ng-container *ngIf="mobileView">
+                <img class="testimonial-img" [src]="imgUrl('clickbait2.png')">
+                <img class="testimonial-img" [src]="imgUrl('clickbait6.png')">
+                <img class="testimonial-img" [src]="imgUrl('clickbait3.png')">
+            </ng-container>
+            <img class="testimonial-img" [src]="imgUrl('clickbait5.png')">
+            <img class="testimonial-img" [src]="imgUrl('clickbait1.png')">
+        </div>
+        <div *ngIf="!mobileView" class="testimonial-img-col">
+            <img class="testimonial-img" [src]="imgUrl('clickbait2.png')">
+            <img class="testimonial-img" [src]="imgUrl('clickbait6.png')">
+            <img class="testimonial-img" [src]="imgUrl('clickbait3.png')">
+        </div>
+    </div>
+    
 </div>
