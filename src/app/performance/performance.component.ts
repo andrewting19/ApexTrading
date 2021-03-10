@@ -12,6 +12,7 @@ import { ModalService } from '../modal/modal.service';
 export class PerformanceComponent implements OnInit {
   openedImg: string = null;
   images = [
+    'alert_result_3.1.png',
     'alert_result_2.22.png',
     'alert_result_2.16.png',
     'alert_result_2.12.png',
