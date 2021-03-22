@@ -10,8 +10,10 @@ import { BreakpointObserver, BreakpointState } from '@angular/cdk/layout';
 export class TestimonialsComponent implements OnInit {
   mobileView: boolean = false;
   col1 = [
+    'clickbait13.png',
     'clickbait4.png',
     'clickbait9.png',
+    'clickbait15.png',
     'clickbait8.png',
     'clickbait12.png',
     'clickbait11.png',
@@ -21,7 +23,7 @@ export class TestimonialsComponent implements OnInit {
     'clickbait2.png',
     'clickbait6.png',
     'clickbait5.png',
-    
+    'clickbait14.png',
     'clickbait7.png',
     'clickbait10.png',
     'clickbait3.png'

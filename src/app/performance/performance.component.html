@@ -1,5 +1,7 @@
 <div class="performance-body">
     <p class="title">💰 <span class="gradient-text">Alert Results</span></p>
+    <p>175 Trades: 134 Wins, 41 Losses, 76.5% Winrate</p>
+    <p>Avg Win +31%, Avg Loss -17%</p>
     <img *ngFor="let image of images" (click)="openModal('performance-modal', image)" class="performance-img" [src]="imgUrl(image)">
 </div>
 
