@@ -30,6 +30,7 @@
 .home-img {
   max-width: 100%;
   margin: 20px;
+  margin-bottom: 0;
 }
 
 .row-desc {
@@ -120,7 +121,7 @@ a:hover {
 
 @media (max-width: 768px) {
   p {
-    text-align: left;
+    text-align: center;
   }
   .title {
     font-size: 35px;
