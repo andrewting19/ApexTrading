@@ -17,16 +17,19 @@ export class TestimonialsComponent implements OnInit {
     'clickbait8.png',
     'clickbait12.png',
     'clickbait11.png',
-    'clickbait1.png'
+    'clickbait1.png',
+    'clickbait16.png',
   ];
   col2 = [
     'clickbait2.png',
     'clickbait6.png',
     'clickbait5.png',
+    'clickbait17.png',
     'clickbait14.png',
     'clickbait7.png',
     'clickbait10.png',
-    'clickbait3.png'
+    'clickbait3.png',
+    'clickbait18.png',
   ];
 
   constructor(
